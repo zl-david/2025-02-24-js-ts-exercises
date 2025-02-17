@@ -1,0 +1,14 @@
+{
+  "name": "02-es6",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:06": "vitest src/06_var_let_const.test.js"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
+  }
+}

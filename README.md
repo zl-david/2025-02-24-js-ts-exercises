@@ -12,3 +12,9 @@
 ## ES6+
 
 - [ES6](./02-es6)
+- [Array Methods](./03-array-methods)
+
+## Async/Await
+
+- [Async/Await & Fetch](./04-async)
+- [Orval.js](./05-async-orval)

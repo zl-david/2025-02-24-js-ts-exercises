@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest",
-    "test:06": "vitest src/06_var_let_const.test.js",
-    "test:07": "vitest src/07_array_object_methods.test.js"
+    "test:01": "vitest src/01_if_for.test.js",
+    "test:02": "vitest src/02_control.test.js"
   },
   "devDependencies": {
     "vite": "^6.1.0",

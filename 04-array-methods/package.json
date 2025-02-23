@@ -1,0 +1,15 @@
+{
+  "name": "04-array-methods",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:06": "vitest src/06_var_let_const.test.js",
+    "test:07": "vitest src/07_array_object_methods.test.js"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
+  }
+}

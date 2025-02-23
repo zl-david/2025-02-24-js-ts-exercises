@@ -42,6 +42,8 @@ Non-primitives:
 
 - 💡 Always try to write your code in such a way that you can use const. When that's not possible, use let. Avoid var.
 
+Here's a list of most commonly used JavaScript features, grouped per version:
+
 ### ES6 (ECMAScript 2015)
 
 1. **Let and Const**: Block-scoped variables.
@@ -100,3 +102,11 @@ Non-primitives:
 
 1. **Object.groupBy() and Map.groupBy()**: Group elements of an object or map.
 2. **Temporal API**: Modern date
+
+## Async
+
+- Prefer Async/Await, as it makes your asynchronous code read more like synchronous code.
+
+## Other
+
+- Avoid `this` keyword.

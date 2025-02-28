@@ -1,4 +1,4 @@
-# Summary
+# Summary JavaScript
 
 ## Links
 
@@ -110,3 +110,63 @@ Here's a list of most commonly used JavaScript features, grouped per version:
 ## Other
 
 - Avoid `this` keyword.
+
+# Summary TypeScript
+
+## Links
+
+- [TypeScript Roadmap](https://roadmap.sh/typescript)
+- [TypeScript Reference](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+- [YouTube - Enum vs as const](https://www.youtube.com/watch?v=Anu8vHXsavo)
+
+## JS vs TS
+
+| Feature        | JavaScript                        | TypeScript                                                        |
+| -------------- | --------------------------------- | ----------------------------------------------------------------- |
+| File extension | .js                               | .ts                                                               |
+| Environment    | Native (browser, NodeJS)          | Needs transpilation for browser / alternative to NodeJS: bun/deno |
+| Typing         | Dynamic (type checked at runtime) | Static (type checked during development)                          |
+| Error Handling | Errors only appear at runtime     | Errors caught during compilation                                  |
+| IDE Support    | Limited (no type hints)           | Excellent (type hints, autocomplete)                              |
+| Features       | ES5/ES6+                          | ES6+ plus advanced features (e.g., interfaces, enums)             |
+
+Example using [Bun](https://bun.sh/):
+
+```json
+{
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "build": "bun build src/index.ts --outdir ./dist",
+    "typebuild": "npm run check-types && npm run build"
+  }
+}
+```
+
+## Type vs Interface
+
+- If you're not working with Classes, prefer Type Alias, Interface can be interesting if you need [merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html)
+- `type` or `interface` behave almost exactly the same
+- You can do more with `type` (union, intersection, alias for primitives & tuples)
+- Interface in typescript doesn't behave the same as in other languages, and can be confusing:
+
+| Feature               | TypeScript                  | Java / C#                           |
+| --------------------- | --------------------------- | ----------------------------------- |
+| Type checking         | Duck typing (structural)    | Nominal (explicit `implements`)     |
+| Runtime presence      | Compile-time only           | Exists at runtime                   |
+| Objects and functions | Interfaces describe both    | Mostly for classes only             |
+| Merging               | Automatic merging supported | Not possible                        |
+| Union types           | Supported                   | Not possible or requires workaround |
+
+## Arrays, Objects and Tuples
+
+```typescript
+const myArray: number[] = [1, 2, 3];
+const myArray2: Array<number> = [1, 2, 3];
+
+const myObject: object = { name: "John" };
+const myObject2: { name: string } = { name: "John" };
+```
+
+1. **Tuple**: `[number, string]` , bv `const RGB: [red: number, green: number, blue: number] = [0,0,0]`
+2. **Record**: `Record<string, Person>`
+3. **Enum**: `enum X { a, b }`

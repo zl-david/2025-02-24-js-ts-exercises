@@ -7,6 +7,7 @@
 - Visualize event loop: [https://www.jsv9000.app/](https://www.jsv9000.app/)
 - Browser don’t support all new features immediately. See [https://caniuse.com](https://caniuse.com).
 - [MDN Docs](https://developer.mozilla.org/en-US/)
+- [Regex](https://regex101.com/)
 
 ## Primitives vs Non-primitives
 
@@ -104,6 +105,27 @@ Here's a list of most commonly used JavaScript features, grouped per version:
 2. **Temporal API**: Modern date
 
 ## Async
+
+```javascript
+/* https://www.jsv9000.app/ */
+{
+  function foo() {
+    console.log("Foo");
+  }
+  function bar() {
+    setTimeout(function barTimeout() {
+      console.log("Bar");
+    }, 0);
+  }
+  function foobar() {
+    console.log("Foobar");
+  }
+  // Click the "RUN" button to learn how this works!
+  foo();
+  bar();
+  foobar();
+}
+```
 
 - Prefer Async/Await, as it makes your asynchronous code read more like synchronous code.
 
